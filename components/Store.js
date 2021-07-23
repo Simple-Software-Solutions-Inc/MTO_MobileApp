@@ -1,5 +1,6 @@
 import * as React from 'react';
 import axios from 'axios';
+import {BaseUrl}  from "../api/client"
 import {
   Text,
   View,
@@ -28,7 +29,7 @@ export default class Store extends React.Component {
 	}
 
   buttonAction = () =>{
-    axios.get('http://192.168.1.8:8080/api/products')
+    axios.get(BaseUrl + '/api/products')
     .then( (response) => {
       //console.log(response.data);
       this.setState((state)=>({ "products": response.data}));

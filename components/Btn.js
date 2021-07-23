@@ -7,9 +7,6 @@ import { Platform } from 'react-native'
 export default class Product extends React.Component {
   render() {
     return (
-      //  (Platform.OS === "android")??
-      //   console.log("Platform is iOS"));
-    //    (
       <View>
       <Button 
             onPress ={this.props.btnAction}
@@ -17,13 +14,6 @@ export default class Product extends React.Component {
             color='#007AFF'
             accessibilityLabel='Learn more about this purple button'/>
             </View>
-    //)
-    // ) ;
-    // ((Platform.OS === 'ios')??
-    //     (<TouchableOpacity style={styles.buttonStyle}>
-    //         <Text style={styles.textButtonStyle}>Add to Cart</Text>
-    //        </TouchableOpacity>))
-    
       
     );
   }

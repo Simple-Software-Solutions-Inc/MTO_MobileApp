@@ -33,7 +33,7 @@ export default class Product extends React.Component {
         imageSize={20}
 />
  
-       <Btn btnAction={()=>this.props.btnAction({name:this.props.name, price: this.props.price})}/>
+       <Btn btnAction={()=>this.props.btnAction({name:this.props.name, value: this.props.price})}/>
         
        </View>
       </View>

@@ -27,19 +27,19 @@ export default class Home extends React.Component {
       // console.log("in loop");
       let exist = false;
       orderDetail.forEach(function(item){
-        if (item.name === val.name && item.price === val.price){
+        if (item.name === val.name && item.value === val.value){
           exist = true;
         }
       });
       if (!exist){
         orderDetail.push(val);
-        carter2 += parseFloat(val.price);
+        carter2 += parseFloat(val.value);
         this.setState({ cart: (carter + 1)});  
       }
       
     }else{
       orderDetail.push(val);
-      carter2 += parseFloat(val.price);
+      carter2 += parseFloat(val.value);
       this.setState({ cart: (carter + 1)});
     }
     this.setState({ value: (carter2)});
@@ -55,7 +55,7 @@ export default class Home extends React.Component {
   };
 
   render() {
-     
+    console.log(this.props);
     return (
       <View style={styles.container}>
         <Header  cartItem={this.state.cart} value={this.state.value} productList={this.state.productList} showBtn={true} navigation={this.props.navigation}/>

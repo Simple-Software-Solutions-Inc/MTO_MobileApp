@@ -58,7 +58,7 @@ export default class Checkout extends React.Component {
                     onRequestClose={() => this.setState({ showModal: false })}
                 >
                     <WebView
-                        source={{ uri: "http://localhost:8080/store/checkout/?product=%5B%5D" }}
+                        source={{ uri: 'http://192.168.1.8:8080/store/checkout/?product=%5B%7B"name"%3A"G+Exam"%2C"value"%3A120%7D%5D' }}
                         onNavigationStateChange={data =>
                             this.handleResponse(data)
                         }

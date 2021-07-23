@@ -4,6 +4,7 @@ import { Text, View, Button, StyleSheet, Image , TouchableOpacity} from 'react-n
 import { Dimensions } from 'react-native';
 import { Platform } from 'react-native'
 import Btn from './Btn'
+import {BaseUrl}  from "../api/client"
 
 export default class OrderItem extends React.Component {
   constructor(props) {
@@ -16,7 +17,7 @@ export default class OrderItem extends React.Component {
     };	 
   }
   render() {
-    //console.log('http://192.168.1.8:8080' + this.props.src);
+    //console.log(BaseUrl + '' + this.props.src);
     return (
      
       <View>

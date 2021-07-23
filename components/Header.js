@@ -7,7 +7,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 
 
-export default class Product extends React.Component {
+export default class Header extends React.Component {
   constructor(props) {
     // Required step: always call the parent class' constructor
     var data = [];
@@ -41,12 +41,12 @@ export default class Product extends React.Component {
          </Text>
          </View>: <Text></Text>}
      
-      
+         
        </View>
+       {(typeof this.props.showBtn !== 'undefined')?
        <View style={{backgroundColor:'black', margin:0}} >
       <Text style={{fontSize:20, textAlign:'center', color:'white', padding:5}}>DriveTest App Store</Text>
-      </View>
-      
+      </View>: <Text></Text>}
       </View>
     );
   }

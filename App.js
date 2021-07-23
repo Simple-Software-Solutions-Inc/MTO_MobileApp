@@ -4,6 +4,8 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Home from './screens/HomeScreen';
 import Checkout from './screens/CheckoutScreen';
+import LoginScreen from './screens/LoginScreen';
+import QuestionScreen from './screens/QuestionScreen';
 import AppCheckout from './paypal/Paypal';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -27,14 +29,15 @@ export default class App extends React.Component {
 
     <NavigationContainer>
       <Stack.Navigator>
-      {/* <Stack.Screen name="Checkout" component={Checkout} /> */}
+      <Stack.Screen name="LoginScreen" component={LoginScreen}   options= {{ title: 'Welcome' }}/>
         <Stack.Screen
           name="Home"
           component={Home}
-          options= {{ title: 'Welcome' }}
-          
+          options= {{ title: 'Welcome' }}         
         />
-        {/* <Stack.Screen name="Checkout" component={Checkout} /> */}
+         
+         <Stack.Screen name="QuestionScreen" component={QuestionScreen}   options= {{ title: 'Welcome' }}/>
+         {/* <Stack.Screen name="Checkout" component={Checkout} /> */}
         <Stack.Screen name="Checkout" component={AppCheckout} />
       </Stack.Navigator>
     </NavigationContainer>
